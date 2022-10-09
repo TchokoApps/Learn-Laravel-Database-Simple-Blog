@@ -2,13 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
 
-class CategoryFactory extends Factory
+class TagFactory extends Factory
 {
-    protected $model = Category::class;
+    protected $model = Tag::class;
 
     /**
      * Define the model's default state.
@@ -18,7 +18,7 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->name,
+            'name' => $this->faker->name,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
